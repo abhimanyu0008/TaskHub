@@ -52,8 +52,8 @@ This project is a Spring Boot application that provides a REST API for task mana
   - Response: `201 Created` or `500 Internal Server Error`
 
 - **Get All Tasks**
-  - `GET /tasks`
-  - Response: `200 OK`
+  GET /tasks
+
   
 - **Get Task by ID**
   - GET /tasks/{id}
@@ -74,7 +74,7 @@ This project is a Spring Boot application that provides a REST API for task mana
   - Response: `200 OK` or `404 Not Found`
 
 - **Delete a Task**
-  - `DELETE /tasks/{id}`
+  - DELETE /tasks/{id}
   - Response: `200 OK` or `404 Not Found`
 
 ### User Authentication Endpoints
@@ -82,17 +82,17 @@ This project is a Spring Boot application that provides a REST API for task mana
 - **Register User**
   - `POST /user/register-user`
   - Request Body:
-    ```json
+   
     {
       "username": "johndoe",
       "password": "password123",
       "email": "johndoe@example.com"
     }
-    ```
-  - Response: `201 Created` or `409 Conflict`
+    
+  - Response: 201 Created or 409 Conflict
 
 - **Login User**
-  - `POST /user/login-user`
+  - POST /user/login-user
   - Request Body:
     
     {
@@ -100,10 +100,10 @@ This project is a Spring Boot application that provides a REST API for task mana
       "password": "password123"
     }
    
-  - Response: `200 OK` or `401 Unauthorized`
+  - Response: 200 OK` or `401 Unauthorized
 
 - **Change Password**
-  - `PUT /user/change-password`
+  - PUT /user/change-password
   - Request Body:
     
     {
