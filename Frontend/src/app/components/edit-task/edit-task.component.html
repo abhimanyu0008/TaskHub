@@ -1,0 +1,54 @@
+<app-menu></app-menu>
+
+<form>
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <h3>Welcome</h3>
+                <p>You are 30 seconds away from earning your own money!</p>
+            </div>
+            <div class="col-md-9 register-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Edit Task</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <input type="number" class="form-control" placeholder="Id*" value="" name="id"
+                                        [(ngModel)]="selectedTask.id" disabled="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="title">Title</label>
+                                    <input type="text" id="title" class="form-control" [(ngModel)]="selectedTask.title"
+                                        name="title">
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="description">Description</label>
+                                    <textarea id="description" class="form-control"
+                                        [(ngModel)]="selectedTask.description" name="description"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mt-3">
+                                    <label for="status">Status</label>
+                                    <select id="status" class="form-control" [(ngModel)]="selectedTask.status"
+                                        name="status">
+                                        <option value="Pending">Pending</option>
+                                        <option value="In Progress">In Progress</option>
+                                        <option value="Completed">Completed</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" class="form-control" [(ngModel)]="selectedTask.date"
+                                        name="date">
+                                </div>
+                                <input type="submit" class="btnRegister" (click)="updateTask()" value="Edit Task" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
